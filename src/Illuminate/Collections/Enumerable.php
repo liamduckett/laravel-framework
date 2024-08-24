@@ -1053,7 +1053,7 @@ interface Enumerable extends Arrayable, Countable, IteratorAggregate, Jsonable, 
      *
      * @param  int  $options
      * @param  bool  $descending
-     * @return static
+     * @return static<TKey, TValue>
      */
     public function sortKeys($options = SORT_REGULAR, $descending = false);
 
@@ -1061,7 +1061,7 @@ interface Enumerable extends Arrayable, Countable, IteratorAggregate, Jsonable, 
      * Sort the collection keys in descending order.
      *
      * @param  int  $options
-     * @return static
+     * @return static<TKey, TValue>
      */
     public function sortKeysDesc($options = SORT_REGULAR);
 
@@ -1069,7 +1069,7 @@ interface Enumerable extends Arrayable, Countable, IteratorAggregate, Jsonable, 
      * Sort the collection keys using a callback.
      *
      * @param  callable(TKey, TKey): int  $callback
-     * @return static
+     * @return static<TKey, TValue>
      */
     public function sortKeysUsing(callable $callback);
 
