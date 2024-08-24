@@ -1498,7 +1498,7 @@ class LazyCollection implements CanBeEscapedWhenCastToString, Enumerable
      *
      * @param  int  $options
      * @param  bool  $descending
-     * @return static
+     * @return static<TKey, TValue>
      */
     public function sortKeys($options = SORT_REGULAR, $descending = false)
     {
@@ -1509,7 +1509,7 @@ class LazyCollection implements CanBeEscapedWhenCastToString, Enumerable
      * Sort the collection keys in descending order.
      *
      * @param  int  $options
-     * @return static
+     * @return static<TKey, TValue>
      */
     public function sortKeysDesc($options = SORT_REGULAR)
     {
@@ -1520,7 +1520,7 @@ class LazyCollection implements CanBeEscapedWhenCastToString, Enumerable
      * Sort the collection keys using a callback.
      *
      * @param  callable(TKey, TKey): int  $callback
-     * @return static
+     * @return static<TKey, TValue>
      */
     public function sortKeysUsing(callable $callback)
     {
