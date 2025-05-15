@@ -25,7 +25,7 @@ class Notification
     /**
      * Get the channels the event should broadcast on.
      *
-     * @return array
+     * @return \Illuminate\Broadcasting\Channel[]|string[]|\Illuminate\Broadcasting\Channel|string
      */
     public function broadcastOn()
     {
